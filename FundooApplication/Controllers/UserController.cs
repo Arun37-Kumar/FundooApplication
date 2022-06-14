@@ -82,7 +82,7 @@ namespace FundooApplication.Controllers
         /// </summary>
         /// <param name="userData"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPut]
         [Route("reset")] //6/8
         public async Task<IActionResult> ResetPassword([FromBody] ResetModel userData) ////frombody attribute says value read from body of the request
         {
