@@ -43,6 +43,9 @@ namespace FundooApplication
             services.AddTransient<INotesRepository, NotesRepository>();
             services.AddTransient<INotesManager, NotesManager>();
 
+            services.AddTransient<ICollaboratorRepository, CollaboratorRepository>();
+            services.AddTransient<ICollaboratorManager, CollaboratorManager>();
+
             services.AddSingleton<IFundooDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<FundooDatabaseSetting>>().Value);
 
